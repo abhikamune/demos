@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Sim Demo</title>
+  <link rel="stylesheet" type="text/css" href="rickshaw.min.css">
+</head>
+
+<script src="jquery.min.js"></script>
+<script src="d3.v3.min.js"></script>
+<script src="dimple.v2.1.6.min.js"></script>
+<script src="topojson.min.js"></script>
+<script src="datamaps.usa.min.js"></script>
+<script src="d3.layout.min.js"></script>
+<script src="rickshaw.min.js"></script>
+
+<script src="states.js"></script>
+<script src="kafkatopics.js"></script>
+
+<style>
+body {
+    background: url(bg.png) no-repeat center center fixed; 
+}
+
+.heading {
+  font-size: 30px;
+  color: white;
+  width: 400px;
+  border-bottom: 2px white solid;
+  font-family: Arial;
+  font-weight: 600;
+}
+
+.dimple-custom-axis-label {
+  fill: white;
+}
+
+.dimple-custom-axis-title {
+  fill: white;
+}
+
+.dimple-custom-axis-line {
+  stroke: white;
+}
+
+
+.flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#payLevelContainer {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  margin-bottom: 30px
+}
+
+#pageContainer {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+#mapContainer {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+#architectureImage {
+  margin-top:30px;
+  width: 100%;
+  height: 100%;
+}
+
+.metrics_chart_container {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#chart {
+  display: inline-block;
+  margin-left: 40px;
+}
+#y_axis {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+}
+#legend {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 10px;
+  width: 200px;
+}
+
+#totalDurationContainer {
+  font-size: 30px;
+  color: white;
+  font-family: Arial;
+  font-weight: 600;
+}
+</style>
+
+<script type="text/javascript">
+base_uri = "/kafkarest/consumers/"
+
+$( document ).ready(function() {
+  initializeCharts();
+
+  createConsumerInstance("eventsimgroup" + getRandomGroup(), startConsumingRawEventsim)
+  createConsumerInstance("eventsimstreamgroup" + getRandomGroup(), startConsumingEventsimStream)
+  createConsumerInstance("metricsgroup" + getRandomGroup(), startConsumingMetrics)
+});
+
+function getRandomGroup() {
+  return Math.floor((Math.random() * 1000000) + 1)
+}
+
+function createConsumerInstance(groupname, callbackfunction) {
+  // Consumer Instance not created, create one
+  console.log("Creating new Consumer Instance")
+
+  // Create consumer instance
+  var jqxhr = $.ajax({
+    type: "POST",
+    data: "{\"format\": \"binary\"}",
+    url:base_uri + groupname,
+    contentType: "application/vnd.kafka.v1+json"
+  })
+  .done(function(data) {
+    console.log("New consumer created " + data["base_uri"])
+    consumerinstance = data["base_uri"]
+
+    // Take the consumer instance out of the URI
+    consumerinstancesArray = consumerinstance.split("/")
+    consumerinstance = consumerinstancesArray[consumerinstancesArray.length - 1]
+
+    console.log("New consumer parsed " + consumerinstance)
+
+    callbackfunction(groupname, consumerinstance)
+  })
+  .fail(function(data) {
+    console.log("Error creating Consumer Instance:\n")
+    console.dir(data)
+  });
+}
+
+function startConsumingRawEventsim(groupname, consumerinstance) {
+  console.log("Starting Raw Interval")
+  setInterval(function() {
+    consumeRawEventsim(groupname, consumerinstance);
+  }, 5000);
+}
+
+function startConsumingEventsimStream(groupname, consumerinstance) {
+  console.log("Starting Stream Interval")
+  setInterval(function() {
+    consumeEventsimStream(groupname, consumerinstance);
+  }, 5000);
+}
+
+function startConsumingMetrics(groupname, consumerinstance) {
+  console.log("Starting Metrics Interval")
+  setInterval(function() {
+    consumeMetrics(groupname, consumerinstance);
+  }, 5000);
+}
+
+function consumeRawEventsim(groupname, consumerinstance) {
+  // Create consumer instance
+  var jqxhr = $.ajax({
+    headers: {
+        Accept: "application/vnd.kafka.binary.v1+json"
+    },
+    url:base_uri + groupname + "/instances/" + consumerinstance + "/topics/eventsim"
+    
+  })
+  .done(function(data) {
+    //console.log("Consumed ");
+    //console.dir(data)
+
+    var jsonObjects = []
+
+    for(var i = 0; i < data.length; i++) {
+      decodedValue = atob(data[i].value)
+      var jsonObject = JSON.parse(decodedValue)
+      // Add the item count for D3.js to have a single number per row
+      jsonObject['itemcount'] = 1
+
+      jsonObjects.push(jsonObject)
+    }
+
+    processJSONObjects(jsonObjects)
+  })
+  .fail(function(data) {
+    console.log("Error consuming raw topic:\n")
+    console.dir(data)
+  });
+}
+
+// Example JSON:
+
+/*
+artist: "PanteÃÂÃÂ³n RococÃÂÃÂ³"
+auth: "Logged In"
+firstName: "Saul"
+gender: "M"
+itemInSession: 1
+lastName: "Wright"
+length: 207.04608
+level: "free"
+location: "Seattle-Tacoma-Bellevue, WA"
+method: "PUT"
+page: "NextSong"
+registration: 1409637662818
+sessionId: 21
+song: "Reality Shock"
+status: 200
+ts: 1409819403818
+userId: "10"
+*/
+
+function processJSONObjects(jsonObjects) {
+  for (var i = allRawCharts.length - 1; i >= 0; i--) {
+    allRawCharts[i].data = jsonObjects
+    allRawCharts[i].draw();
+  };
+
+  showStateData(jsonObjects)
+}
+
+function showStateData(jsonObjects) {
+
+  var latLongToCounts = {}
+
+  for(var i = 0; i < jsonObjects.length; i++) {
+    // Not event has a location. Log out events don't have it
+    if (typeof jsonObjects[i]["lat"] !== 'undefined') {
+      // Count the number of hits per lat/lon
+      latLon = jsonObjects[i]["lat"] + "^" + jsonObjects[i]["lon"]
+
+      if (latLon in latLongToCounts) {
+        latLongToCounts[latLon] += 1
+      } else {
+        latLongToCounts[latLon] = 1
+      }
+    }
+  }
+
+  var bubblesArray = []
+
+  for (var latLon in latLongToCounts) {
+    latLonArray = latLon.split("^")
+
+    bubblesArray.push({
+      radius: latLongToCounts[latLon] * 4,
+      hits: latLongToCounts[latLon],
+      fillKey: 'USAGE',
+      latitude: latLonArray[0],
+      longitude: latLonArray[1]
+    })
+  }
+
+  map.bubbles(bubblesArray, {
+    popupTemplate: function(geo, data) {
+      return '<div class="hoverinfo">Hits:' + data.hits}
+  });
+}
+
+function consumeEventsimStream(groupname, consumerinstance) {
+  // Create consumer instance
+  var jqxhr = $.ajax({
+    headers: {
+        Accept: "application/vnd.kafka.binary.v1+json"
+    },
+    url:base_uri + groupname + "/instances/" + consumerinstance + "/topics/eventsimstream"
+    
+  })
+  .done(function(data) {
+    //console.log("Consumed ");
+    //console.dir(data)
+
+    if (data.length != 0) {
+      var jsonObjects = []
+
+      for(var i = 0; i < data.length; i++) {
+        decodedValue = atob(data[i].value)
+        var jsonObject = JSON.parse(decodedValue)
+        // Add the item count for D3.js to have a single number per row
+        jsonObject['itemcount'] = 1
+
+        jsonObjects.push(jsonObject)
+      }
+
+      processStreamJSONObjects(jsonObjects)
+    }
+  })
+  .fail(function(data) {
+    console.log("Error consuming raw topic:\n")
+    console.dir(data)
+  });
+}
+
+// Example JSON:
+
+/*
+{"totalduration":1187583.1287200002,
+"artisttoplaycount": [{"name" : "","count" : 185419},{"name" : "The Black Keys","count" : 15893},{"name" : "Radiohead","count" : 16521},{"name" : "Eminem","count" : 19199},{"name" : "Kings Of Leon","count" : 26885},{"name" : "Coldplay","count" : 22922},{"name" : "Justin Bieber","count" : 16587},{"name" : "Muse","count" : 16988},{"name" : "Dwight Yoakam","count" : 17710},{"name" : "BjÃÂ¶rk","count" : 18532}], 
+"songtoplaycount": [{"name" : "","count" : 185417},{"name" : "The Gift","count" : 7635},{"name" : "Canada","count" : 8529},{"name" : "Revelry","count" : 16875},{"name" : "You're The One","count" : 18523},{"name" : "Invalid","count" : 11299},{"name" : "Undo","count" : 17824},{"name" : "Sehr kosmisch","count" : 9444},{"name" : "Horn Concerto No. 4 in E flat K495: II. Romance (Andante cantabile)","count" : 7647},{"name" : "Fireflies","count" : 8382}] }
+*/
+
+function processStreamJSONObjects(jsonObjects) {
+  allStreamCharts[0].data = jsonObjects[0].artisttoplaycount
+  allStreamCharts[0].draw();
+
+  allStreamCharts[1].data = jsonObjects[0].songtoplaycount
+  allStreamCharts[1].draw();
+
+  updateTotalDuration(jsonObjects[0].totalduration)
+}
+
+function updateTotalDuration(seconds) {
+  $("#totalDurationContainer").html("Total played: " + secondsToString(seconds))
+}
+
+function secondsToString (seconds) {
+  var years = Math.floor(seconds / 31536000);
+  var max =2;
+  var current = 0;
+  var str = "";
+  if (years && current<max) {
+      str+= years + 'y ';
+      current++;
+  }
+  var days = Math.floor((seconds %= 31536000) / 86400);
+  if (days && current<max) {
+      str+= days + 'd ';
+      current++;
+  }
+  var hours = Math.floor((seconds %= 86400) / 3600);
+  if (hours && current<max) {
+      str+= hours + 'h ';
+      current++;
+  }
+  var minutes = Math.floor((seconds %= 3600) / 60);
+  if (minutes && current<max) {
+      str+= minutes + 'm ';
+      current++;
+  }
+  var seconds = seconds % 60;
+  if (seconds && current<max) {
+      str+= seconds + 's ';
+      current++;
+  }
+
+  return str;
+}
+
+allRawCharts = []
+allStreamCharts = []
+
+function initializeCharts() {
+  // Raw charts
+  createChart("#payLevelContainer", "level", "itemcount", "Pay Level", "Num. Customers", 390, 200, 60, 30, 330, 130, dimple.plot.bar, allRawCharts, [
+      {"level": "free", "itemcount": 2},
+      {"level": "paid", "itemcount": 10},
+    ], [
+      new dimple.color("#009245"),
+      new dimple.color("#8CC63F")
+    ], 20);
+
+  createChart("#pageContainer", "page", "itemcount", "Page", "Pages Viewed", 390, 200, 60, 30, 330, 130, dimple.plot.bar, allRawCharts, [
+      {"page": "NextSong", "itemcount": 12},
+      {"page": "Logout", "itemcount": 2},
+    ], [
+      new dimple.color("#0071BC")
+    ], 20);
+
+  // Stream charts
+  createChart("#topArtistsContainer", "name", "count", "Artist", "Plays", 390, 200, 60, 30, 330, 130, dimple.plot.bar, allStreamCharts, [
+      {"name": "Kings of Leon", "count": 100},
+      {"name": "Muse", "count": 80},
+    ], [
+      new dimple.color("#F15A24")
+    ], 10);
+
+  createChart("#topSongsContainer", "name", "count", "Song Name", "Plays", 390, 200, 60, 30, 330, 130, dimple.plot.bar, allStreamCharts, [
+      {"name": "Revelry", "count": 60},
+      {"name": "Use", "count": 40},
+    ], [
+      new dimple.color("#8461B7")
+    ], 10);
+
+  updateTotalDuration(1337)
+
+  map = new Datamap({
+      element: document.getElementById('mapContainer'),
+      scope: 'usa',
+      fills: {
+          USAGE: '#FFFFFF',
+          UNKNOWN: '#29ABE2',
+          defaultFill: '#29ABE2'
+      },
+      geographyConfig: {
+        borderWidth: 1,
+        borderColor: '#0071BC',
+        popupOnHover: false,
+        highlightOnHover: false
+      }
+  });
+
+  map.bubbles([
+    {
+      radius: 10,
+      fillKey: 'USAGE',
+      latitude: 45.7867,
+      longitude: -108.5372
+    },{
+      radius: 20,
+      fillKey: 'USAGE',
+      latitude: 39.5272,
+      longitude: -119.8219
+    }
+  ], {
+    popupTemplate: function(geo, data) {
+      return '<div class="hoverinfo">Hits:' + data.radius}
+  });
+
+  createMetricsCharts(); 
+}
+
+function createMetricsCharts() {
+  // Add the metrics charts
+  for (var i = kafkatopics.length - 1; i >= 0; i--) {
+    divName = kafkatopics[i].description.replace(/ /g, '_');
+    console.log("Adding chart for " + divName)
+    topicDiv = $('#metricsContainer').append(
+      "<div id=\"" + divName + "\" class=\"metrics_chart_container\">" +
+      "<div id=\"y_axis\"></div>" +
+      "<div id=\"chart\"></div>" + 
+      "<div id=\"legend\"></div>" +
+      "</div>");
+
+    var seriesData = [];
+
+    for (var j = kafkatopics[i].topics.length - 1; j >= 0; j--) {
+      var startingValues = [];
+
+      // Epoch needs 150 entries before it will start drawing
+      // Add 150 placeholders to speed that up
+      for (var k = 150; k > 0; k--) {
+        startingValues.push({
+          x: getTimestamp() - k,
+          y: 1
+        });
+      }
+
+      seriesData.push({
+        color: "#7FCDEE",
+        "name": kafkatopics[i].topics[j].description,
+        "data": startingValues})
+    };
+
+    kafkatopics[i]["data"] = seriesData
+
+    kafkatopics[i]["chart"] = new Rickshaw.Graph( {
+        element: document.querySelector("#" + divName + " #chart"),
+        width: 900,
+        height: 100,
+        series: seriesData,
+        renderer: 'line'
+    });
+
+    var ticksTreatment = 'glow';
+
+    var x_axis = new Rickshaw.Graph.Axis.Time( {
+      graph: kafkatopics[i]["chart"],
+      ticksTreatment: ticksTreatment,
+      timeFixture: new Rickshaw.Fixtures.Time.Local()
+    });
+
+    var y_axis = new Rickshaw.Graph.Axis.Y( {
+            graph: kafkatopics[i]["chart"],
+            orientation: 'left',
+            tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+            element: document.querySelector("#" + divName + " #y_axis"),
+            tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+            ticksTreatment: ticksTreatment
+    });
+
+    var legend = new Rickshaw.Graph.Legend( {
+            element: document.querySelector("#" + divName + " #legend"),
+            graph: kafkatopics[i]["chart"]
+    });
+
+
+    var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+      graph: kafkatopics[i]["chart"],
+      xFormatter: function(x) {
+        return new Date(x * 1000).toString();
+      }
+    } );
+
+    kafkatopics[i]["chart"].render()
+  }
+}
+
+function createChart(container, xname, yname, xtitle, ytitle, xsize, ysize, bounds1, bounds2, bounds3, bounds4, chartType, chartArray, initialdata, colors, overrideMax) {
+  var svg = dimple.newSvg(container, xsize, ysize);
+  pageChart = new dimple.chart(svg, initialdata);
+  pageChart.setBounds(bounds1, bounds2, bounds3, bounds4)
+  var x = pageChart.addCategoryAxis("x", xname);
+  x.title = xtitle
+  x.colors = "white"
+  var y = pageChart.addMeasureAxis("y", yname);
+  y.title = ytitle
+  pageChart.addSeries(xname, chartType);
+
+  y.showGridlines = false;
+  y.hidden = true;
+  y.overrideMax = overrideMax;
+
+  pageChart.defaultColors = colors
+
+  pageChart.draw();
+
+  chartArray.push(pageChart)
+}
+
+function consumeMetrics(groupname, consumerinstance) {
+  // Create consumer instance
+  var jqxhr = $.ajax({
+    headers: {
+        Accept: "application/vnd.kafka.binary.v1+json"
+    },
+    url:base_uri + groupname + "/instances/" + consumerinstance + "/topics/metricstopic"
+    
+  })
+  .done(function(data) {
+    //console.log("Consumed ");
+    //console.dir(data)
+
+    // Verify that the metrics payload has data
+    if (data.length != 0) {
+      var jsonObjects = []
+
+      for(var i = 0; i < data.length; i++) {
+        decodedValue = atob(data[i].value)
+        var jsonObject = JSON.parse(decodedValue)
+
+        jsonObjects.push(jsonObject)
+      }
+
+      processMetricsJSON(jsonObjects)
+    }
+  })
+  .fail(function(data) {
+    console.log("Error consuming metrics:\n")
+    console.dir(data)
+  });
+}
+
+function processMetricsJSON(jsonObjects) {
+  // Iterate through both arrays to find the topics we are interested in
+  for (var i = kafkatopics.length - 1; i >= 0; i--) {
+    for (var j = kafkatopics[i].topics.length - 1; j >= 0; j--) {
+      if (kafkatopics[i].topics[j].topic in jsonObjects[0]) {
+        addMetric(kafkatopics[i].data[j].data, {
+          x: getTimestamp(),
+          y: jsonObjects[0][kafkatopics[i].topics[j].topic][kafkatopics[i].topics[j].values[0]]
+        });
+      }
+    };
+
+    kafkatopics[i].chart.update();
+  };
+
+  //console.dir(jsonObjects)
+}
+
+function getTimestamp() {
+  return Math.floor(new Date().getTime() / 1000);;
+}
+
+function addMetric(metricArray, metric) {
+  if (metricArray.length > 50) {
+    // Limit the metrics arrays to a maximum of 50 items
+    metricArray.shift()
+  }
+
+  metricArray.push(metric)
+}
+
+</script>
+
+<body>
+
+  <div id="flexContainer">
+    <img src="confluent_logo.png" width="25%" style="padding-left: 30px; padding-bottom: 20px; padding-top: 10px" />
+    <img src="kafka_logo.png" width="15%" style="float:right; padding-right: 30px; padding-top: 10px" />
+  </div>
+
+  <div id="flexContainer">
+    <div class="heading">Kafka Streams</div>
+
+    <div class="flexContainer">
+      <div id="topArtistsContainer"></div>
+      
+      <div id="topSongsContainer"></div>
+
+      <div id="totalDurationContainer"></div>
+    </div>
+
+    <div class="heading">Raw Data</div>
+
+    <div class="flexContainer">
+      <div id="payLevelContainer"></div>
+
+      <div id="pageContainer"></div>
+
+      <div id="mapContainer"></div>
+    </div>
+
+    <div class="heading">Data Flow</div>
+
+    <img src="data_flow_diagram.png" id="architectureImage" />
+
+    <div class="heading">Health Metrics</div>
+
+    <div id="metricsContainer" class="flexContainer"></div>
+  </div>
+</body>
+</html>

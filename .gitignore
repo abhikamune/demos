@@ -1,0 +1,9 @@
+kstreamseventsim/target
+kafkametricproducer/target
+.DS_Store
+kstreamseventsim/.settings
+kstreamseventsim/.classpath
+kstreamseventsim/.project
+kafkametricproducer/.classpath
+kafkametricproducer/.project
+kafkametricproducer/.settings

@@ -1,0 +1,1801 @@
+{
+    "kafka.server:name=BytesOutPerSec,topic=eventsim,type=BrokerTopicMetrics": {
+        "Count": 10602595,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 774.3885827713007,
+        "OneMinuteRate": 3457.5623689921686,
+        "FiveMinuteRate": 3466.2320606996036,
+        "FifteenMinuteRate": 3351.5686841752577
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=StopReplica,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.log:name=Size,partition=2,topic=eventsim,type=Log": {
+        "Value": 33518100
+    },
+    "kafka.network:name=RequestsPerSec,request=ConsumerMetadata,type=RequestMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.server:name=MessagesInPerSec,topic=_schemas,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "messages",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=RemoteTimeMs,request=Heartbeat,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:name=FailedProduceRequestsPerSec,topic=hello_topic,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.log:name=LogStartOffset,partition=0,topic=testing,type=Log": {
+        "Value": 4
+    },
+    "kafka.server:name=FailedProduceRequestsPerSec,topic=_schemas,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=TotalTimeMs,request=OffsetFetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RequestsPerSec,request=OffsetCommit,type=RequestMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.log:name=LogStartOffset,partition=1,topic=eventsim,type=Log": {
+        "Value": 34789
+    },
+    "kafka.log:name=LogStartOffset,partition=0,topic=hello_topic,type=Log": {
+        "Value": 0
+    },
+    "kafka.server:name=PurgatorySize,type=ProducerRequestPurgatory": {
+        "Value": 0
+    },
+    "kafka.network:name=IdlePercent,networkProcessor=0,type=SocketServer": {
+        "Count": 13647018768845,
+        "EventType": "percent",
+        "RateUnit": "NANOSECONDS",
+        "MeanRate": 0.9967043148108189,
+        "OneMinuteRate": 0.9987913323678651,
+        "FiveMinuteRate": 0.9986099275936416,
+        "FifteenMinuteRate": 0.9982297892718638
+    },
+    "kafka.server:name=RequestHandlerAvgIdlePercent,type=KafkaRequestHandlerPool": {
+        "Count": 13689777726189,
+        "EventType": "percent",
+        "RateUnit": "NANOSECONDS",
+        "MeanRate": 0.9998336232531512,
+        "OneMinuteRate": 0.999298481832594,
+        "FiveMinuteRate": 0.9996661131502358,
+        "FifteenMinuteRate": 0.9997159120054426
+    },
+    "kafka.network:name=LocalTimeMs,request=StopReplica,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RequestsPerSec,request=JoinGroup,type=RequestMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.log:name=NumLogSegments,partition=0,topic=testing,type=Log": {
+        "Value": 1
+    },
+    "kafka.cluster:name=UnderReplicated,partition=0,topic=eventsim,type=Partition": {
+        "Value": 0
+    },
+    "kafka.network:name=RemoteTimeMs,request=Fetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 100,
+        "75thPercentile": 101,
+        "Mean": 99.46039788212411,
+        "StdDev": 12.354808611635203,
+        "95thPercentile": 102,
+        "98thPercentile": 104,
+        "99thPercentile": 106,
+        "999thPercentile": 112.88400000000001,
+        "Max": 172,
+        "Count": 249873
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=FetchConsumer,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.15458252792418548,
+        "StdDev": 0.36779562364750246,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 30,
+        "Count": 249873
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=Metadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.7105263157894737,
+        "StdDev": 3.8703074125636534,
+        "95thPercentile": 1,
+        "98thPercentile": 6.400000000000205,
+        "99thPercentile": 31,
+        "999thPercentile": 31,
+        "Max": 31,
+        "Count": 190
+    },
+    "kafka.network:name=RemoteTimeMs,request=Metadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 190
+    },
+    "kafka.server:clientId=Replica,name=MinFetchRate,type=ReplicaFetcherManager": {
+        "Value": 0
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=StopReplica,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=TotalTimeMs,request=JoinGroup,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.controller:name=PreferredReplicaImbalanceCount,type=KafkaController": {
+        "Value": 0
+    },
+    "kafka.network:name=IdlePercent,networkProcessor=1,type=SocketServer": {
+        "Count": 13644643553407,
+        "EventType": "percent",
+        "RateUnit": "NANOSECONDS",
+        "MeanRate": 0.9965293060444615,
+        "OneMinuteRate": 0.9946768516786001,
+        "FiveMinuteRate": 0.9961736848738616,
+        "FifteenMinuteRate": 0.9965006403119874
+    },
+    "kafka.network:name=RemoteTimeMs,request=UpdateMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 4
+    },
+    "kafka.network:name=RequestsPerSec,request=ControlledShutdown,type=RequestMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=FetchConsumer,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.16937003998031,
+        "StdDev": 0.38983354264772224,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 37,
+        "Count": 249873
+    },
+    "kafka.network:name=RequestsPerSec,request=LeaderAndIsr,type=RequestMetrics": {
+        "Count": 3,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0.00021910591562240755,
+        "OneMinuteRate": 3.7737744405411637e-100,
+        "FiveMinuteRate": 6.23746362689e-21,
+        "FifteenMinuteRate": 9.991255303165483e-8
+    },
+    "kafka.network:name=LocalTimeMs,request=FetchFollower,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=Fetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.15458252792418548,
+        "StdDev": 0.36779570573189957,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 30,
+        "Count": 249873
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=StopReplica,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=OffsetFetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=OffsetFetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:name=BytesInPerSec,type=BrokerTopicMetrics": {
+        "Count": 10617123,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 775.4330169600191,
+        "OneMinuteRate": 3456.392595167665,
+        "FiveMinuteRate": 3465.971058607722,
+        "FifteenMinuteRate": 3351.847237115891
+    },
+    "kafka.network:name=RequestsPerSec,request=Heartbeat,type=RequestMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.server:name=FailedFetchRequestsPerSec,topic=eventsim,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=FetchFollower,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:name=BytesRejectedPerSec,topic=eventsim,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.log:name=Size,partition=0,topic=eventsim,type=Log": {
+        "Value": 19698463
+    },
+    "kafka.log:name=LogEndOffset,partition=0,topic=hello_topic,type=Log": {
+        "Value": 160
+    },
+    "kafka.server:name=LeaderCount,type=ReplicaManager": {
+        "Value": 6
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=LeaderAndIsr,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 7,
+        "Mean": 2.3333333333333335,
+        "StdDev": 4.041451884327381,
+        "95thPercentile": 7,
+        "98thPercentile": 7,
+        "99thPercentile": 7,
+        "999thPercentile": 7,
+        "Max": 7,
+        "Count": 3
+    },
+    "kafka.network:name=ResponsesBeingSent,type=SocketServer": {
+        "Value": 0
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=UpdateMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0.5,
+        "75thPercentile": 5.5,
+        "Mean": 2,
+        "StdDev": 3.366501646120693,
+        "95thPercentile": 7,
+        "98thPercentile": 7,
+        "99thPercentile": 7,
+        "999thPercentile": 7,
+        "Max": 7,
+        "Count": 4
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=OffsetCommit,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=Produce,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.11629976272080148,
+        "StdDev": 0.32659820203157536,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 8,
+        "Count": 30344
+    },
+    "kafka.log:name=LogEndOffset,partition=0,topic=testing,type=Log": {
+        "Value": 4
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=Heartbeat,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=JoinGroup,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RequestsPerSec,request=Produce,type=RequestMetrics": {
+        "Count": 30344,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 2.2161753832227626,
+        "OneMinuteRate": 9.89651914603047,
+        "FiveMinuteRate": 9.884805987108502,
+        "FifteenMinuteRate": 9.557222749257367
+    },
+    "kafka.controller:name=LeaderElectionRateAndTimeMs,type=ControllerStats": {
+        "LatencyUnit": "MILLISECONDS",
+        "EventType": "calls",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0.00007303591828483574,
+        "OneMinuteRate": 1.7607468288813413e-100,
+        "FiveMinuteRate": 3.090034864248126e-21,
+        "FifteenMinuteRate": 4.9812819419010876e-8,
+        "Min": 91.808855,
+        "50thPercentile": 91.808855,
+        "75thPercentile": 91.808855,
+        "Mean": 91.808855,
+        "StdDev": 0,
+        "95thPercentile": 91.808855,
+        "98thPercentile": 91.808855,
+        "99thPercentile": 91.808855,
+        "999thPercentile": 91.808855,
+        "Max": 91.808855,
+        "Count": 1
+    },
+    "kafka.server:name=NumOffsets,type=OffsetManager": {
+        "Value": 0
+    },
+    "kafka.network:name=TotalTimeMs,request=Heartbeat,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RequestsPerSec,request=Metadata,type=RequestMetrics": {
+        "Count": 190,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0.01387668477179054,
+        "OneMinuteRate": 0.01260653949128467,
+        "FiveMinuteRate": 0.015945002486056327,
+        "FifteenMinuteRate": 0.016239704652457203
+    },
+    "kafka.network:name=LocalTimeMs,request=Heartbeat,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:name=FailedFetchRequestsPerSec,topic=hello_topic,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.cluster:name=UnderReplicated,partition=0,topic=_schemas,type=Partition": {
+        "Value": 0
+    },
+    "kafka.server:name=FailedProduceRequestsPerSec,topic=eventsim,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.log:name=LogEndOffset,partition=0,topic=_schemas,type=Log": {
+        "Value": 2
+    },
+    "kafka.log:name=NumLogSegments,partition=0,topic=_schemas,type=Log": {
+        "Value": 1
+    },
+    "kafka.network:name=TotalTimeMs,request=ControlledShutdown,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:name=MessagesInPerSec,topic=hello_topic,type=BrokerTopicMetrics": {
+        "Count": 160,
+        "EventType": "messages",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0.011716705402672277,
+        "OneMinuteRate": 0.024907320785174544,
+        "FiveMinuteRate": 0.021994130614780533,
+        "FifteenMinuteRate": 0.023055490271936
+    },
+    "kafka.server:name=BytesRejectedPerSec,topic=hello_topic,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=Heartbeat,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=LocalTimeMs,request=UpdateMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 3,
+        "Mean": 1,
+        "StdDev": 2,
+        "95thPercentile": 4,
+        "98thPercentile": 4,
+        "99thPercentile": 4,
+        "999thPercentile": 4,
+        "Max": 4,
+        "Count": 4
+    },
+    "kafka.log:name=LogEndOffset,partition=0,topic=eventsim,type=Log": {
+        "Value": 348765
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=Metadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.19473684210526315,
+        "StdDev": 0.43521652515236553,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1.1800000000000068,
+        "999thPercentile": 3,
+        "Max": 3,
+        "Count": 190
+    },
+    "kafka.log:name=Size,partition=0,topic=_schemas,type=Log": {
+        "Value": 108
+    },
+    "kafka.network:name=TotalTimeMs,request=Offsets,type=RequestMetrics": {
+        "Min": 1,
+        "50thPercentile": 1,
+        "75thPercentile": 11.5,
+        "Mean": 4.5,
+        "StdDev": 7,
+        "95thPercentile": 15,
+        "98thPercentile": 15,
+        "99thPercentile": 15,
+        "999thPercentile": 15,
+        "Max": 15,
+        "Count": 4
+    },
+    "kafka.server:name=UnderReplicatedPartitions,type=ReplicaManager": {
+        "Value": 0
+    },
+    "kafka.server:name=IsrShrinksPerSec,type=ReplicaManager": {
+        "Count": 0,
+        "EventType": "shrinks",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.log:name=NumLogSegments,partition=2,topic=eventsim,type=Log": {
+        "Value": 1
+    },
+    "kafka.network:name=LocalTimeMs,request=OffsetFetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.controller:name=ActiveControllerCount,type=KafkaController": {
+        "Value": 1
+    },
+    "kafka.server:name=MessagesInPerSec,topic=eventsim,type=BrokerTopicMetrics": {
+        "Count": 30310,
+        "EventType": "messages",
+        "RateUnit": "SECONDS",
+        "MeanRate": 2.21375969316402,
+        "OneMinuteRate": 9.885647497578558,
+        "FiveMinuteRate": 9.879483618383404,
+        "FifteenMinuteRate": 9.552472497070418
+    },
+    "kafka.network:name=LocalTimeMs,request=ControlledShutdown,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RequestsPerSec,request=FetchConsumer,type=RequestMetrics": {
+        "Count": 249873,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 18.24951670576382,
+        "OneMinuteRate": 13.665975156574582,
+        "FiveMinuteRate": 13.56995898080723,
+        "FifteenMinuteRate": 13.739313095950102
+    },
+    "kafka.log:name=Size,partition=0,topic=hello_topic,type=Log": {
+        "Value": 7360
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=OffsetFetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=Fetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.1579722499029507,
+        "StdDev": 0.5790415596594541,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1.9710000000000036,
+        "Max": 224,
+        "Count": 249873
+    },
+    "kafka.log:name=LogStartOffset,partition=0,topic=_schemas,type=Log": {
+        "Value": 0
+    },
+    "kafka.controller:name=OfflinePartitionsCount,type=KafkaController": {
+        "Value": 0
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=FetchFollower,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:name=BytesRejectedPerSec,topic=_schemas,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.server:name=BrokerState,type=KafkaServer": {
+        "Value": 4
+    },
+    "kafka.network:name=LocalTimeMs,request=JoinGroup,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseQueueSize,processor=0,type=RequestChannel": {
+        "Value": 0
+    },
+    "kafka.network:name=RemoteTimeMs,request=Offsets,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 4
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=ConsumerMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:name=PurgatorySize,type=FetchRequestPurgatory": {
+        "Value": 593
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=ConsumerMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.log:name=LogStartOffset,partition=0,topic=eventsim,type=Log": {
+        "Value": 293663
+    },
+    "kafka.server:name=BytesInPerSec,topic=_schemas,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=TotalTimeMs,request=Produce,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 1,
+        "Mean": 0.39582784075929345,
+        "StdDev": 0.5279865454698777,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1.9710000000000036,
+        "Max": 20,
+        "Count": 30344
+    },
+    "kafka.common:name=Version,type=AppInfo": {
+        "Value": "0.8.2.0-cp"
+    },
+    "kafka.log:name=Size,partition=1,topic=eventsim,type=Log": {
+        "Value": 26282919
+    },
+    "kafka.network:name=RequestsPerSec,request=StopReplica,type=RequestMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=RequestsPerSec,request=Offsets,type=RequestMetrics": {
+        "Count": 4,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0.00029214009077849,
+        "OneMinuteRate": 7.042987315525365e-100,
+        "FiveMinuteRate": 1.2360139456992504e-20,
+        "FifteenMinuteRate": 1.992512776760435e-7
+    },
+    "kafka.network:name=RequestQueueSize,type=RequestChannel": {
+        "Value": 0
+    },
+    "kafka.log:name=Size,partition=0,topic=testing,type=Log": {
+        "Value": 0
+    },
+    "kafka.network:name=LocalTimeMs,request=FetchConsumer,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.039720177850347975,
+        "StdDev": 0.22098911566404836,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 29,
+        "Count": 249873
+    },
+    "kafka.server:name=ExpiresPerSecond,type=DelayedProducerRequestMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=JoinGroup,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=TotalTimeMs,request=Fetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 101,
+        "75thPercentile": 101,
+        "Mean": 99.9816506785447,
+        "StdDev": 12.366240117816565,
+        "95thPercentile": 103,
+        "98thPercentile": 105,
+        "99thPercentile": 107,
+        "999thPercentile": 112.94200000000001,
+        "Max": 324,
+        "Count": 249873
+    },
+    "kafka.log:name=LogStartOffset,partition=2,topic=eventsim,type=Log": {
+        "Value": 403070
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=Metadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.14210526315789473,
+        "StdDev": 0.36489309773669304,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1.0900000000000034,
+        "999thPercentile": 2,
+        "Max": 2,
+        "Count": 190
+    },
+    "kafka.cluster:name=UnderReplicated,partition=1,topic=eventsim,type=Partition": {
+        "Value": 0
+    },
+    "kafka.server:name=BytesInPerSec,topic=hello_topic,type=BrokerTopicMetrics": {
+        "Count": 7360,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0.5389673297208469,
+        "OneMinuteRate": 1.1457367561180294,
+        "FiveMinuteRate": 1.0117300082799043,
+        "FifteenMinuteRate": 1.0605525525090551
+    },
+    "kafka.server:name=FailedFetchRequestsPerSec,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=ControlledShutdown,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:name=FollowerExpiresPerSecond,type=DelayedFetchRequestMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=LocalTimeMs,request=Fetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.039720177850347975,
+        "StdDev": 0.22098894530382673,
+        "95thPercentile": 0,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 29,
+        "Count": 249873
+    },
+    "kafka.server:name=PartitionCount,type=ReplicaManager": {
+        "Value": 6
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=ControlledShutdown,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=Offsets,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0.75,
+        "Mean": 0.25,
+        "StdDev": 0.5,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 1,
+        "Count": 4
+    },
+    "kafka.network:name=LocalTimeMs,request=Produce,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.14724492486158713,
+        "StdDev": 0.3791569593966252,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 19,
+        "Count": 30344
+    },
+    "kafka.network:name=RequestsPerSec,request=Fetch,type=RequestMetrics": {
+        "Count": 249873,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 18.249449174996894,
+        "OneMinuteRate": 13.669304706356826,
+        "FiveMinuteRate": 13.570765262982244,
+        "FifteenMinuteRate": 13.739597667019696
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=OffsetCommit,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.log:name=LogEndOffset,partition=2,topic=eventsim,type=Log": {
+        "Value": 496898
+    },
+    "kafka:type=kafka.Log4jController": {
+        "Loggers": "[root=WARN, kafka.server.ReplicaManager=null, kafka.network.BlockingChannel=null, kafka.controller.ReplicaStateMachine$BrokerChangeListener=null, kafka.utils.KafkaScheduler=null, com.yammer.metrics.reporting.JmxReporter=null, kafka.controller.KafkaController=null, kafka.controller.RequestSendThread=null, kafka.controller.OfflinePartitionLeaderSelector=null, kafka.server.FetchRequestPurgatory=null, org.I0Itec.zkclient.ZkEventThread=null, kafka.log.Log=null, kafka.api.FetchResponseSend$$anon$2=null, kafka.utils.FileLock=null, org.apache.zookeeper.ClientCnxnSocketNIO=null, kafka.controller.ReplicaStateMachine=null, kafka.server.ZookeeperLeaderElector=null, kafka.cluster.Replica=null, kafka.admin.AdminUtils$=null, org.I0Itec.zkclient.ZkConnection=null, org.apache.zookeeper.CreateMode=null, kafka.utils.ZkUtils$=null, kafka.network.BoundedByteBufferReceive=null, kafka.network.BoundedByteBufferSend=null, kafka.server.KafkaRequestHandler=null, org.apache.zookeeper.ClientCnxn=null, kafka.server.KafkaServer=null, kafka.network.SocketServer=null, kafka.server.OffsetManager=null, kafka.log.OffsetIndex=null, org.apache.zookeeper.ClientCnxnSocket=null, kafka.network.Acceptor=null, org.apache.zookeeper.client.StaticHostProvider=null, kafka.network.Processor=null, kafka.controller.ControllerChannelManager=null, kafka.server.ZookeeperLeaderElector$LeaderChangeListener=null, kafka.server.ReplicaFetcherManager=null, kafka.request.logger=null, kafka.controller.PartitionStateMachine$TopicChangeListener=null, org.apache.zookeeper.client.ZooKeeperSaslClient=null, org.apache.zookeeper.server.DataTree=null, kafka.controller.PartitionStateMachine=null, org.apache.zookeeper.ZooKeeper=null, kafka.server.RequestPurgatory$ExpiredRequestReaper=null, kafka.log.LogSegment=null, org.I0Itec.zkclient.ZkClient=null, kafka.log.FileMessageSet=null, kafka.cluster.Partition=null, kafka.server.KafkaApis=null, kafka.api.TopicDataSend$$anon$1=null, state.change.logger=null, kafka.network.RequestChannel$=null, kafka.utils.Mx4jLoader$=null, kafka.log.LogManager=null, kafka.utils.ReplicationUtils$=null, kafka.utils.VerifiableProperties=null]"
+    },
+    "kafka.cluster:name=UnderReplicated,partition=0,topic=hello_topic,type=Partition": {
+        "Value": 0
+    },
+    "kafka.server:name=BytesOutPerSec,topic=_schemas,type=BrokerTopicMetrics": {
+        "Count": 108,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0.00788800741997549,
+        "OneMinuteRate": 1.9016065751918488e-98,
+        "FiveMinuteRate": 3.3372376533879923e-19,
+        "FifteenMinuteRate": 0.0000053797844972532075
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=ControlledShutdown,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=LocalTimeMs,request=ConsumerMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=LeaderAndIsr,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 1,
+        "75thPercentile": 1,
+        "Mean": 0.6666666666666666,
+        "StdDev": 0.5773502691896258,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 1,
+        "Count": 3
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=UpdateMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0.75,
+        "Mean": 0.25,
+        "StdDev": 0.5,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 1,
+        "Count": 4
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=Offsets,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 2.25,
+        "Mean": 0.75,
+        "StdDev": 1.5,
+        "95thPercentile": 3,
+        "98thPercentile": 3,
+        "99thPercentile": 3,
+        "999thPercentile": 3,
+        "Max": 3,
+        "Count": 4
+    },
+    "kafka.log:name=NumLogSegments,partition=0,topic=eventsim,type=Log": {
+        "Value": 1
+    },
+    "kafka.network:name=TotalTimeMs,request=ConsumerMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RequestsPerSec,request=OffsetFetch,type=RequestMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=TotalTimeMs,request=UpdateMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 1,
+        "75thPercentile": 9.25,
+        "Mean": 3.5,
+        "StdDev": 5.686240703077327,
+        "95thPercentile": 12,
+        "98thPercentile": 12,
+        "99thPercentile": 12,
+        "999thPercentile": 12,
+        "Max": 12,
+        "Count": 4
+    },
+    "kafka.network:name=NetworkProcessorAvgIdlePercent,type=SocketServer": {
+        "Count": 13659984464688,
+        "EventType": "percent",
+        "RateUnit": "NANOSECONDS",
+        "MeanRate": 0.9976440886742146,
+        "OneMinuteRate": 0.9982028569977259,
+        "FiveMinuteRate": 0.9978312018627795,
+        "FifteenMinuteRate": 0.9977822173307728
+    },
+    "kafka.server:name=BytesOutPerSec,type=BrokerTopicMetrics": {
+        "Count": 10602703,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 774.376260835951,
+        "OneMinuteRate": 3457.5623689921686,
+        "FiveMinuteRate": 3466.2320606996036,
+        "FifteenMinuteRate": 3351.568689555041
+    },
+    "kafka.log:name=NumLogSegments,partition=1,topic=eventsim,type=Log": {
+        "Value": 1
+    },
+    "kafka.network:name=LocalTimeMs,request=LeaderAndIsr,type=RequestMetrics": {
+        "Min": 1,
+        "50thPercentile": 6,
+        "75thPercentile": 37,
+        "Mean": 14.666666666666666,
+        "StdDev": 19.5021366350801,
+        "95thPercentile": 37,
+        "98thPercentile": 37,
+        "99thPercentile": 37,
+        "999thPercentile": 37,
+        "Max": 37,
+        "Count": 3
+    },
+    "kafka.network:name=TotalTimeMs,request=LeaderAndIsr,type=RequestMetrics": {
+        "Min": 1,
+        "50thPercentile": 7,
+        "75thPercentile": 45,
+        "Mean": 17.666666666666668,
+        "StdDev": 23.86070689089771,
+        "95thPercentile": 45,
+        "98thPercentile": 45,
+        "99thPercentile": 45,
+        "999thPercentile": 45,
+        "Max": 45,
+        "Count": 3
+    },
+    "kafka.network:name=TotalTimeMs,request=OffsetCommit,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RequestsPerSec,request=FetchFollower,type=RequestMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=Produce,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.16239907727797,
+        "StdDev": 0.3772156335139789,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 9,
+        "Count": 30345
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=Offsets,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0.5,
+        "75thPercentile": 1,
+        "Mean": 0.5,
+        "StdDev": 0.5773502691896257,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 1,
+        "Count": 4
+    },
+    "kafka.network:name=LocalTimeMs,request=OffsetCommit,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RemoteTimeMs,request=ConsumerMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.log:name=NumLogSegments,partition=0,topic=hello_topic,type=Log": {
+        "Value": 1
+    },
+    "kafka.network:name=RequestQueueTimeMs,request=Fetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.16937003998031,
+        "StdDev": 0.38983352365206997,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 37,
+        "Count": 249873
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=ConsumerMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseQueueSize,type=RequestChannel": {
+        "Value": 0
+    },
+    "kafka.cluster:name=UnderReplicated,partition=2,topic=eventsim,type=Partition": {
+        "Value": 0
+    },
+    "kafka.network:name=RemoteTimeMs,request=ControlledShutdown,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=TotalTimeMs,request=FetchFollower,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:clientId=Replica,name=MaxLag,type=ReplicaFetcherManager": {
+        "Value": 0
+    },
+    "kafka.server:name=NumDelayedRequests,type=FetchRequestPurgatory": {
+        "Value": 1
+    },
+    "kafka.network:name=RemoteTimeMs,request=JoinGroup,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=Heartbeat,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=LocalTimeMs,request=Metadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 1,
+        "Mean": 0.9210526315789473,
+        "StdDev": 3.723364282368048,
+        "95thPercentile": 1.4499999999999886,
+        "98thPercentile": 14.800000000000068,
+        "99thPercentile": 25.81000000000003,
+        "999thPercentile": 34,
+        "Max": 34,
+        "Count": 190
+    },
+    "kafka.log:name=LogEndOffset,partition=1,topic=eventsim,type=Log": {
+        "Value": 108340
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=UpdateMetadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0.75,
+        "Mean": 0.25,
+        "StdDev": 0.5,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 1,
+        "Count": 4
+    },
+    "kafka.server:name=BytesRejectedPerSec,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=RemoteTimeMs,request=FetchFollower,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RemoteTimeMs,request=FetchConsumer,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 100,
+        "75thPercentile": 101,
+        "Mean": 99.46040004162097,
+        "StdDev": 12.354783669835673,
+        "95thPercentile": 102,
+        "98thPercentile": 104,
+        "99thPercentile": 106,
+        "999thPercentile": 110,
+        "Max": 172,
+        "Count": 249874
+    },
+    "kafka.server:name=IsrExpandsPerSec,type=ReplicaManager": {
+        "Count": 0,
+        "EventType": "expands",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.cluster:name=UnderReplicated,partition=0,topic=testing,type=Partition": {
+        "Value": 0
+    },
+    "kafka.network:name=IdlePercent,networkProcessor=2,type=SocketServer": {
+        "Count": 13687991479545,
+        "EventType": "percent",
+        "RateUnit": "NANOSECONDS",
+        "MeanRate": 0.9996887961330786,
+        "OneMinuteRate": 1.0008380011921991,
+        "FiveMinuteRate": 0.9986103088151935,
+        "FifteenMinuteRate": 0.9985824544961979
+    },
+    "kafka.server:name=ConsumerExpiresPerSecond,type=DelayedFetchRequestMetrics": {
+        "Count": 241415,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 17.63161109702857,
+        "OneMinuteRate": 10.90277256463021,
+        "FiveMinuteRate": 10.803887988989622,
+        "FifteenMinuteRate": 11.067722355510478
+    },
+    "kafka.network:name=RemoteTimeMs,request=StopReplica,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:name=NumDelayedRequests,type=ProducerRequestPurgatory": {
+        "Value": 0
+    },
+    "kafka.server:name=FailedFetchRequestsPerSec,topic=_schemas,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=RequestsPerSec,request=UpdateMetadata,type=RequestMetrics": {
+        "Count": 4,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0.00029213894882737827,
+        "OneMinuteRate": 5.534521269422499e-100,
+        "FiveMinuteRate": 9.327498491138133e-21,
+        "FifteenMinuteRate": 1.4972537245066568e-7
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=FetchFollower,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=OffsetCommit,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RemoteTimeMs,request=OffsetFetch,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseQueueSize,processor=2,type=RequestChannel": {
+        "Value": 0
+    },
+    "kafka.network:name=TotalTimeMs,request=FetchConsumer,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 101,
+        "75thPercentile": 101,
+        "Mean": 99.98165475399601,
+        "StdDev": 12.366215557453092,
+        "95thPercentile": 103,
+        "98thPercentile": 105,
+        "99thPercentile": 107,
+        "999thPercentile": 112.91300000000001,
+        "Max": 324,
+        "Count": 249874
+    },
+    "kafka.controller:name=UncleanLeaderElectionsPerSec,type=ControllerStats": {
+        "Count": 0,
+        "EventType": "elections",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.server:name=NumGroups,type=OffsetManager": {
+        "Value": 0
+    },
+    "kafka.network:name=RemoteTimeMs,request=OffsetCommit,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.server:name=FailedProduceRequestsPerSec,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "requests",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=ResponseQueueSize,processor=1,type=RequestChannel": {
+        "Value": 0
+    },
+    "kafka.server:name=BytesOutPerSec,topic=hello_topic,type=BrokerTopicMetrics": {
+        "Count": 0,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 0,
+        "OneMinuteRate": 0,
+        "FiveMinuteRate": 0,
+        "FifteenMinuteRate": 0
+    },
+    "kafka.network:name=TotalTimeMs,request=Metadata,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 1,
+        "75thPercentile": 1,
+        "Mean": 1.9105263157894736,
+        "StdDev": 7.424639554893537,
+        "95thPercentile": 2,
+        "98thPercentile": 21.560000000000286,
+        "99thPercentile": 56.81000000000003,
+        "999thPercentile": 65,
+        "Max": 65,
+        "Count": 190
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=LeaderAndIsr,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 3
+    },
+    "kafka.network:name=TotalTimeMs,request=StopReplica,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=ResponseSendTimeMs,request=Produce,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.002471576866040534,
+        "StdDev": 0.049654299153595226,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 1,
+        "Max": 1,
+        "Count": 30345
+    },
+    "kafka.network:name=RemoteTimeMs,request=LeaderAndIsr,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 3
+    },
+    "kafka.server:name=MessagesInPerSec,type=BrokerTopicMetrics": {
+        "Count": 30471,
+        "EventType": "messages",
+        "RateUnit": "SECONDS",
+        "MeanRate": 2.2254668755927165,
+        "OneMinuteRate": 9.901243296011163,
+        "FiveMinuteRate": 9.899630621495817,
+        "FifteenMinuteRate": 9.574836794880703
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=JoinGroup,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 0
+    },
+    "kafka.network:name=RemoteTimeMs,request=Produce,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0,
+        "StdDev": 0,
+        "95thPercentile": 0,
+        "98thPercentile": 0,
+        "99thPercentile": 0,
+        "999thPercentile": 0,
+        "Max": 0,
+        "Count": 30345
+    },
+    "kafka.server:name=BytesInPerSec,topic=eventsim,type=BrokerTopicMetrics": {
+        "Count": 10610123,
+        "EventType": "bytes",
+        "RateUnit": "SECONDS",
+        "MeanRate": 774.9303426497275,
+        "OneMinuteRate": 3457.2109969336766,
+        "FiveMinuteRate": 3465.29156366522,
+        "FifteenMinuteRate": 3350.9266004658352
+    },
+    "kafka.network:name=ResponseQueueTimeMs,request=FetchConsumer,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 0,
+        "75thPercentile": 0,
+        "Mean": 0.157975619712335,
+        "StdDev": 0.5790428380178022,
+        "95thPercentile": 1,
+        "98thPercentile": 1,
+        "99thPercentile": 1,
+        "999thPercentile": 1,
+        "Max": 224,
+        "Count": 249874
+    },
+    "kafka.network:name=LocalTimeMs,request=Offsets,type=RequestMetrics": {
+        "Min": 0,
+        "50thPercentile": 1,
+        "75thPercentile": 8.5,
+        "Mean": 3.25,
+        "StdDev": 5.188127472091126,
+        "95thPercentile": 11,
+        "98thPercentile": 11,
+        "99thPercentile": 11,
+        "999thPercentile": 11,
+        "Max": 11,
+        "Count": 4
+    }
+}

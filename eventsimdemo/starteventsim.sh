@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/vmuser/host/repos/eventsim
+cd /home/vmuser/eventsim
 
 #bin/eventsim -c "examples/example-config.json" --from 365 \
 #--nusers 50 --growth-rate 0.01 \

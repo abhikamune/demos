@@ -389,14 +389,14 @@ function initializeCharts() {
       {"name": "Muse", "count": 80},
     ], [
       new dimple.color("#F15A24")
-    ], 10);
+    ], 0);
 
   createChart("#topSongsContainer", "name", "count", "Song Name", "Plays", 390, 200, 60, 30, 330, 130, dimple.plot.bar, allStreamCharts, [
       {"name": "Revelry", "count": 60},
       {"name": "Use", "count": 40},
     ], [
       new dimple.color("#8461B7")
-    ], 10);
+    ], 0);
 
   updateTotalDuration(1337)
 
@@ -525,7 +525,10 @@ function createChart(container, xname, yname, xtitle, ytitle, xsize, ysize, boun
 
   y.showGridlines = false;
   y.hidden = true;
-  y.overrideMax = overrideMax;
+
+  if (overrideMax != 0) {
+    y.overrideMax = overrideMax;
+  }
 
   pageChart.defaultColors = colors
 

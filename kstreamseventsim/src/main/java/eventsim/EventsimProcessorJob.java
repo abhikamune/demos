@@ -144,7 +144,9 @@ public class EventsimProcessorJob {
 
 								totalDuration += duration.asDouble();
 
-								checkDelete(entry.key());
+								if (checkDelete(entry.key())) {
+									iter.remove();
+								}
 							} catch (Exception e) {
 								e.printStackTrace();
 							}
@@ -160,7 +162,7 @@ public class EventsimProcessorJob {
 					songToPlayCount.clear();
 				}
 
-				private void checkDelete(String key) {
+				private boolean checkDelete(String key) {
 					// Use a rolling window and generations to keep more data
 					String[] parts = key.split("-");
 
@@ -168,11 +170,13 @@ public class EventsimProcessorJob {
 						int gen = Integer.parseInt(parts[1]);
 
 						if (gen < currentGeneration.get() - maximumGenerations) {
-							this.kvStore.delete(key);
+							return true;
 						}
 					} catch (Exception e) {
 						logger.debug(e);
 					}
+					
+					return false;
 				}
 
 				private String output(double totalDuration, long totalEntries) {

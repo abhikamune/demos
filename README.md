@@ -1,4 +1,4 @@
-# demos
+# Kafka Demos
 
 Stream processing demo showing how Kafka can be used to create a real-time dashboard at scale.
 

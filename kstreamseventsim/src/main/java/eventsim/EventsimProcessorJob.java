@@ -21,6 +21,7 @@ import org.apache.kafka.streams.processor.WallclockTimestampExtractor;
 import org.apache.kafka.streams.state.KeyValueIterator;
 import org.apache.kafka.streams.state.KeyValueStore;
 import org.apache.kafka.streams.state.internals.InMemoryKeyValueStoreSupplier;
+import org.apache.kafka.streams.state.internals.MeteredKeyValueStore;
 import org.apache.log4j.Logger;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -41,7 +42,6 @@ public class EventsimProcessorJob {
 		public Processor<String, String> get() {
 			return new Processor<String, String>() {
 				private ProcessorContext context;
-				private InMemoryKeyValueStoreSupplier<String, String> kvStore;
 				private KeyValueStore<String, String> stateStore;
 				
 				ObjectMapper mapper;
@@ -56,15 +56,11 @@ public class EventsimProcessorJob {
 
 				private AtomicInteger currentGeneration = new AtomicInteger(0);
 
-				Serde<String> stringSerde = Serdes.String();
-				
 				@Override
 				public void init(ProcessorContext context) {
 					this.context = context;
 					this.context.schedule(windowsizems);
-					this.kvStore = new InMemoryKeyValueStoreSupplier<String, String>(
-							"local-state", stringSerde, stringSerde);
-					this.stateStore = (KeyValueStore<String, String>) this.kvStore.get();
+					this.stateStore = (MeteredKeyValueStore<String, String>) context.getStateStore("local-state");
 					this.mapper = new ObjectMapper();
 
 					artistToPlayCount = new HashMap<String, Long>();
@@ -266,7 +262,7 @@ public class EventsimProcessorJob {
 
 				@Override
 				public void close() {
-					this.kvStore.get().close();
+					this.stateStore.close();
 				}
 
 				private String getKeyName(String value) {
@@ -295,9 +291,9 @@ public class EventsimProcessorJob {
 		props.put(StreamsConfig.APPLICATION_ID_CONFIG, "event-sim-processor");
 		props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
 		props.put(StreamsConfig.KEY_SERDE_CLASS_CONFIG,
-				StringSerializer.class);
+				Serdes.String().getClass().getName());
 		props.put(StreamsConfig.VALUE_SERDE_CLASS_CONFIG,
-				StringSerializer.class);
+				Serdes.String().getClass().getName());
 		props.put(StreamsConfig.TIMESTAMP_EXTRACTOR_CLASS_CONFIG,
 				WallclockTimestampExtractor.class);
 
@@ -308,6 +304,9 @@ public class EventsimProcessorJob {
 
 		builder.addProcessor("PROCESS", new EventsimProcessorDef(), "SOURCE");
 
+    builder.addStateStore(new InMemoryKeyValueStoreSupplier<String, String>(
+        "local-state", Serdes.String(), Serdes.String()), "PROCESS");
+    
 		builder.addSink("SINK", "eventsimstream", new StringSerializer(),
 				new StringSerializer(), "PROCESS");
 
